@@ -1,6 +1,7 @@
 # PS3ISO Launcher Descrypt
 - Create in bat script.
 - A launcher to facilitate the use of PS3Dec.
+- before using the launcher, [disc keys](https://ia801604.us.archive.org/view_archive.php?archive=/33/items/sony-play-station-3-disc-keys-txt/Sony%20-%20PlayStation%203%20-%20Disc%20Keys%20TXT.zip) are needed.
 
 # How To Use
 
