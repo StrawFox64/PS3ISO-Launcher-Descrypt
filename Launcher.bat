@@ -82,63 +82,39 @@ cls
 goto menu01
 
 :Thd4
-title PS3ISO Decryption --4
+set thdset=4
+title PS3ISO Decryption --%thdset%
 set EXE=4Thd.exe
-set /p SourceFile=Enter the name for ISO: 
-title PS3ISO Decryption --4 --%SourceFile%
-set /p DestFile=Enter the final name for ISO: 
-title PS3ISO Decryption --4 --%SourceFile% --%DestFile%
-set /p dkey=Enter the Decryption Key: 
-title PS3ISO Decryption --4 --%SourceFile% --%DestFile% --%dkey% 
-ping 127.0.0.1 -n 5 > nul
-"%EXE%" "%TYPE00%" "%TYPE01%" "%dkey%" "%DIR_SOURCE%\%SourceFile%" "%DIR_DEST%\%DestFile%"
-title PS3ISO Decryption --4 --%SourceFile% --%DestFile% --%dkey% 
-pause
-goto menu00
+goto resume
 
 :Thd8
-title PS3ISO Decryption --8
+set thdset=8
+title PS3ISO Decryption --%thdset%
 set EXE=8Thd.exe
-set /p SourceFile=Enter the name for ISO: 
-title PS3ISO Decryption --8 --%SourceFile%
-set /p DestFile=Enter the final name for ISO: 
-title PS3ISO Decryption --8 --%SourceFile% --%DestFile%
-set /p dkey=Enter the Decryption Key: 
-title PS3ISO Decryption --8 --%SourceFile% --%DestFile% --%dkey% 
-ping 127.0.0.1 -n 5 > nul
-"%EXE%" "%TYPE00%" "%TYPE01%" "%dkey%" "%DIR_SOURCE%\%SourceFile%" "%DIR_DEST%\%DestFile%"
-title PS3ISO Decryption --8 --%SourceFile% --%DestFile% --%dkey% 
-pause
-goto menu00
+goto resume
 
 :Thd12
-title PS3ISO Decryption --12
+set thdset=12
+title PS3ISO Decryption --%thdset%
 set EXE=12Thd.exe
-set /p SourceFile=Enter the name for ISO: 
-title PS3ISO Decryption --12 --%SourceFile%
-set /p DestFile=Enter the final name for ISO: 
-title PS3ISO Decryption --12 --%SourceFile% --%DestFile%
-set /p dkey=Enter the Decryption Key: 
-title PS3ISO Decryption --12 --%SourceFile% --%DestFile% --%dkey% 
-ping 127.0.0.1 -n 5 > nul
-"%EXE%" "%TYPE00%" "%TYPE01%" "%dkey%" "%DIR_SOURCE%\%SourceFile%" "%DIR_DEST%\%DestFile%"
-title PS3ISO Decryption --12 --%SourceFile% --%DestFile% --%dkey% 
-pause
-goto menu00
+goto resume
 
 :Thd16
-title PS3ISO Decryption --16
+set thdset=16
+title PS3ISO Decryption --%thdset%
 set EXE=16Thd.exe
+goto resume
+
+:resume
 set /p SourceFile=Enter the name for ISO: 
-title PS3ISO Decryption --16 --%SourceFile%
+title PS3ISO Decryption --%thdset% --%SourceFile%
 set /p DestFile=Enter the final name for ISO: 
-title PS3ISO Decryption --16 --%SourceFile% --%DestFile%
+title PS3ISO Decryption --%thdset% --%SourceFile% --%DestFile%
 set /p dkey=Enter the Decryption Key: 
-title PS3ISO Decryption --16 --%SourceFile% --%DestFile% --%dkey% 
+title PS3ISO Decryption --%thdset% --%SourceFile% --%DestFile% --%dkey% 
 ping 127.0.0.1 -n 5 > nul
 "%EXE%" "%TYPE00%" "%TYPE01%" "%dkey%" "%DIR_SOURCE%\%SourceFile%" "%DIR_DEST%\%DestFile%"
-title PS3ISO Decryption --16 --%SourceFile% --%DestFile% --%dkey% 
-pause
+ping 127.0.0.1 -n 3 > nul
 goto menu00
 
 :Exit
