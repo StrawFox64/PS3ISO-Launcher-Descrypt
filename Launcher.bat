@@ -114,6 +114,7 @@ set /p dkey=Enter the Decryption Key:
 title PS3ISO Decryption --%thdset% --%SourceFile% --%DestFile% --%dkey% 
 ping 127.0.0.1 -n 5 > nul
 "%EXE%" "%TYPE00%" "%TYPE01%" "%dkey%" "%DIR_SOURCE%\%SourceFile%" "%DIR_DEST%\%DestFile%"
+if exist "%DIR_SOURCE%\%SourceFile%" del "%DIR_SOURCE%\%SourceFile%"
 ping 127.0.0.1 -n 3 > nul
 goto menu00
 
@@ -141,6 +142,7 @@ echo ==========                                    ==========
 echo ========================================================
 set /p OPTION=Return for menu: 
 goto menu00
+
 
 
 
