@@ -1,5 +1,6 @@
 @echo off
-title PS3ISO Decryption
+set Title=PS3ISO Descryption
+title %Title%
 color 0A
 set DIR_SOURCE=ISO_Files
 set DIR_DEST=ISO_Decrypt
@@ -19,7 +20,6 @@ if not exist "%DIR_DEST%" (
 )
 :menu00
 cls
-title PS3ISO Decryption
 ping 127.0.0.1 -n 2 > nul
 :menu01
 echo =======================================================
@@ -83,35 +83,35 @@ goto menu01
 
 :Thd4
 set thdset=4
-title PS3ISO Decryption --%thdset%
+title %Title% --%thdset%
 set EXE=4Thd.exe
 goto resume
 
 :Thd8
 set thdset=8
-title PS3ISO Decryption --%thdset%
+title %Title% --%thdset%
 set EXE=8Thd.exe
 goto resume
 
 :Thd12
 set thdset=12
-title PS3ISO Decryption --%thdset%
+title %Title% --%thdset%
 set EXE=12Thd.exe
 goto resume
 
 :Thd16
 set thdset=16
-title PS3ISO Decryption --%thdset%
+title %Title% --%thdset%
 set EXE=16Thd.exe
 goto resume
 
 :resume
 set /p SourceFile=Enter the name for ISO: 
-title PS3ISO Decryption --%thdset% --%SourceFile%
+title %Title% --%thdset% --%SourceFile%
 set /p DestFile=Enter the final name for ISO: 
-title PS3ISO Decryption --%thdset% --%SourceFile% --%DestFile%
+title %Title% --%thdset% --%SourceFile% --%DestFile%
 set /p dkey=Enter the Decryption Key: 
-title PS3ISO Decryption --%thdset% --%SourceFile% --%DestFile% --%dkey% 
+title %Title% --%thdset% --%SourceFile% --%DestFile% --%dkey% 
 ping 127.0.0.1 -n 5 > nul
 "%EXE%" "%TYPE00%" "%TYPE01%" "%dkey%" "%DIR_SOURCE%\%SourceFile%" "%DIR_DEST%\%DestFile%"
 if exist "%DIR_SOURCE%\%SourceFile%" del "%DIR_SOURCE%\%SourceFile%"
@@ -142,6 +142,7 @@ echo ==========                                    ==========
 echo ========================================================
 set /p OPTION=Return for menu: 
 goto menu00
+
 
 
 
